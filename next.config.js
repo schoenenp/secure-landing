@@ -10,7 +10,7 @@ const NextConfig = {
     swcMinify: true,
     output: 'standalone',
     distDir: ".next",
-    assetPrefix: process.env.NODE_ENV === "production" ? `http://${process.env.NEXT_PUBLIC_CLIENT_DEV_DOMAIN}` : `http://${process.env.NEXT_PUBLIC_CLIENT_DEV_DOMAIN}`
+    assetPrefix: process.env.NODE_ENV === "production" ? `https://${process.env.NEXT_PUBLIC_CLIENT_APP_DOMAIN}` : `http://${process.env.NEXT_PUBLIC_CLIENT_DEV_DOMAIN}`
 
 };
 
