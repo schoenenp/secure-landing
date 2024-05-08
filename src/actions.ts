@@ -9,4 +9,5 @@ export async function setMyCookies() {
     path: '/',
     secure: process.env.NODE_ENV === "production",
   });
+  document.location.reload()
 }
