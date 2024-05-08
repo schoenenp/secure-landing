@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   if(!policyCookie){
     return
   }
-    return NextResponse.redirect(new URL(process.env.NODE_ENV === "production" ? `https://shop.${process.env.APP_DOMAIN}` : `http://shop.${process.env.DEV_DOMAIN}:3002`, request.url))
+    return NextResponse.redirect(new URL(process.env.NODE_ENV === "production" ? `https://shop.${process.env.NEXT_PUBLIC_CLIENT_APP_DOMAIN}` : `http://shop.${process.env.NEXT_PUBLIC_CLIENT_DEV_DOMAIN}:3002`, request.url))
 }
  
 export const config = {
