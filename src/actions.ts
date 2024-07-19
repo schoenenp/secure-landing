@@ -1,5 +1,6 @@
 "use server";
 import { cookies } from "next/headers";
+
 export async function setMyCookies() {
   cookies().set("acceptPolicy", "true", {
     domain:
@@ -9,5 +10,20 @@ export async function setMyCookies() {
     path: '/',
     secure: process.env.NODE_ENV === "production",
   });
-  document.location.reload()
+}
+
+
+export async function checkCookies() {
+  let acceptPolicyCookie;
+
+  acceptPolicyCookie = cookies().get("acceptPolicy")
+
+  const hasAccept = acceptPolicyCookie !== undefined
+  
+  return hasAccept
+}
+
+export async function logCheckCookies() {
+  const hasCookies = checkCookies();
+  return hasCookies !== undefined
 }

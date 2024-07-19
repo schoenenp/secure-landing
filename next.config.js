@@ -10,8 +10,7 @@ const NextConfig = {
     swcMinify: true,
     output: 'standalone',
     distDir: ".next",
-    assetPrefix: process.env.NODE_ENV === "production" ? `https://secure.${process.env.NEXT_PUBLIC_CLIENT_APP_DOMAIN}` : `http://secure.${process.env.NEXT_PUBLIC_CLIENT_DEV_DOMAIN}:3000`
-
+    assetPrefix: process.env.NODE_ENV === "production" ? `https://secure.${process.env.NEXT_PUBLIC_CLIENT_APP_DOMAIN}` : undefined
 };
 
 export default NextConfig;
