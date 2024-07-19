@@ -16,8 +16,8 @@ export default function AcceptButton(props: AcceptButtonProps) {
       event.preventDefault()
       await setMyCookies()
       router.push(process.env.NODE_ENV === "production"
-        ? `.${process.env.NEXT_PUBLIC_CLIENT_APP_DOMAIN}`
-        : `.${process.env.NEXT_PUBLIC_CLIENT_DEV_DOMAIN}`)
+        ? `https://shop.${process.env.NEXT_PUBLIC_CLIENT_APP_DOMAIN}`
+        : `http://shop.${process.env.NEXT_PUBLIC_CLIENT_DEV_DOMAIN}`)
      }
 
   return (
