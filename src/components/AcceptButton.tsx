@@ -2,18 +2,22 @@
 
 import { setMyCookies } from "@/actions"
 import { useRouter } from "next/navigation"
-
+import { type MouseEvent } from "react"
 
 type AcceptButtonProps = {
     text: string
 }
 
+
 export default function AcceptButton(props: AcceptButtonProps) {
     const router = useRouter()
 
-    function handleAcceptCookies(){
-      setMyCookies()
-      router.refresh()
+    async function handleAcceptCookies(event: MouseEvent<HTMLButtonElement>){
+      event.preventDefault()
+      await setMyCookies()
+      router.push(process.env.NODE_ENV === "production"
+        ? `.${process.env.NEXT_PUBLIC_CLIENT_APP_DOMAIN}`
+        : `.${process.env.NEXT_PUBLIC_CLIENT_DEV_DOMAIN}`)
      }
 
   return (
