@@ -20,8 +20,7 @@ export default function About() {
         </div>
           </div>
        <div className="flex gap-5 flex-col bg-pirrot-blue-950/20  p-4 rounded max-h-80 overflow-y-scroll">
-
-     
+    
         <h3 className="font-black text-2xl text-left">Was sind Cookies?</h3>
         <p>Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie Websites besuchen. Sie helfen uns, Ihr Benutzererlebnis zu verbessern.</p>
         

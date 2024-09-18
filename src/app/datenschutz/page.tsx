@@ -1,7 +1,8 @@
 "use client";
 
+import LoadingSpinner from "@/components/LoadingSpinner";
 import React from "react";
-import Cookies from "universal-cookie";
+
 
 export default function About() {
   const [isClient, setIsClient] = React.useState(false);
@@ -13,11 +14,10 @@ export default function About() {
   if (!isClient)
     return (
       <div className=" min-h-screen flex justify-center items-center w-full h-full bg-black">
-        <span className=" animate-spin text-5xl text-white p-4 border-4 rounded-full aspect-square">
-          
-        </span>
+      <LoadingSpinner />
       </div>
     );
+
   return (
     <main className="flex min-h-screen flex-col gap-5 items-center justify-center  md:p-24 bg-pirrot-blue-700 text-info-100 relative">
       <h2 className="text-3xl font-bold">Datenschutzerklärung</h2>
@@ -49,6 +49,13 @@ export default function About() {
           66125 Saarbrücken
           <br />
           <br />
+          Ust.ID DE 188516815
+          <br />
+          Steuernummer: 040/107/51018
+          <br />
+          Amtsgericht Saarbrücken HRB 11071
+          <br />
+
           Kontaktdaten Datenschutzbeauftragter:
           <br />
           datenschutz@pirrot.de
