@@ -14,7 +14,7 @@ export default function About() {
   if (!isClient)
     return (
       <div className=" min-h-screen flex justify-center items-center w-full h-full bg-black">
-      <LoadingSpinner />
+        <LoadingSpinner />
       </div>
     );
 
@@ -30,7 +30,7 @@ export default function About() {
             <strong>Angaben zur verantwortlichen Stelle</strong>
           </em>
         </p>
-<br />
+        <br />
         <p>
           <strong>Unternehmen:</strong>
           <br />
@@ -39,7 +39,7 @@ export default function About() {
           <br />
           Gesetzlicher Vertreter:
           <br />
-          Herrn Björn Frey &amp; Jörg Mühlhöfer
+          Herrn Björn Frey
           <br />
           <br />
           <strong>Adresse:</strong>
@@ -60,7 +60,7 @@ export default function About() {
           <br />
           datenschutz@pirrot.de
         </p>
-<br />
+        <br />
         <p>
           <em>
             <strong>Allgemeine Datenverarbeitungs-Informationen</strong>
@@ -413,9 +413,9 @@ export default function About() {
           Recht, sich bei Beschwerden an die Datenschutz-Aufsichtsbehörde zu
           wenden.
         </p>
-     
-      <br />
-      <br />
+
+        <br />
+        <br />
       </div>
     </main>
   );
