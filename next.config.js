@@ -6,11 +6,7 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const NextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    output: 'standalone',
-    distDir: ".next",
-    assetPrefix: process.env.NODE_ENV === "production" ? `https://secure.${process.env.NEXT_PUBLIC_CLIENT_APP_DOMAIN}` : undefined
+  output: 'standalone',
 };
 
 export default NextConfig;
